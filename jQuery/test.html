@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/test.css">
+	<script text/javascript src="./js/jquery-3.2.0.min.js"></script>
+	<title>jQuery</title>
+</head>
+<body>
+<div class="tab">
+	<ul class="clearfix nav">
+		<li class="first_li">吉林</li>
+		<li>长春</li>
+	</ul>
+	<div class="tabnext">
+		<div class="selected">吉林</div>
+		<div class="hide">长春</div>
+	</div>
+</div>
+	<script text/javascript>
+		$(function(){
+			$(".nav li").click(function(){
+				$(this).addClass("first_li").siblings().removeClass("first_li");
+				var index=$(this).index();
+				$(".tabnext div").eq(index).removeClass("hide").siblings().addClass("hide");
+			});
+			// $(".nav li").click(function(){
+			// 	var index=$(this).index();
+			// 	$(".tabnext div").eq(index).removeClass("hide").siblings().addClass("hide");
+			// });
+		});
+	</script>
+</body>
+</html>
