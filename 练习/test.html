@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/test.css">
+	<script text/javascript src="./js/jquery-3.2.0.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="flex">
+	<ul class="top_ul">
+		<li>	
+			<a href="#">1</a>
+			<ul class="hide">
+				<li>11</li>
+				<li>11</li>
+				<li>11</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">2</a>
+			<ul class="hide">
+				<li>22</li>
+				<li>22</li>
+				<li>22</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">3</a>
+			<ul class="hide">
+				<li>33</li>
+				<li>33</li>
+				<li>33</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<script text/javascript>
+	$(function(){
+		$(".top_ul li a").click(function(){
+			$(".hide").hide();
+			$(this).siblings(".hide").show();
+		});
+	});
+</script>
+</body>
+</html>
