@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+	.test,.test1{display:none;}
+	@media screen{
+		body{color:#f00;}
+	}
+	@media screen and (min-width:960px){
+		body{background:#999;}
+	}
+	@media screen and (device-width:1024px){
+		.test{display:block;}
+	}
+	@media screen and (width:1024px){
+		.test1{display:block;}
+	}
+	</style>
+</head>
+<body>
+<div>media媒体查询</div>	
+<div class="test">1024的分辨率，取决于输出设备的大小</div>
+<div class="test1">1024的分辨率，取决于浏览器的大小</div>
+</body>
+</html>
